@@ -20,4 +20,7 @@ RUN \
   apt-get install sbt && \
   cd && \
   rm -r /working/ && \
-  sbt sbtVersion
+  touch a.scala && \
+  sbt 'set crossScalaVersions := Seq("2.11.12", "2.12.16", "2.13.8", "3.1.3", "3.0.2", "3.2.0")' '+compile' && \
+  rm a.scala && \
+  sbt clean sbtVersion
