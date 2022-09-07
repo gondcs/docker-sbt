@@ -4,7 +4,7 @@
 ARG OPENJDK_TAG=11.0.13
 FROM openjdk:${OPENJDK_TAG}
 
-ARG SBT_VERSION=1.6.2
+ARG SBT_VERSION=1.7.1
 
 # prevent this error: java.lang.IllegalStateException: cannot run sbt from root directory without -Dsbt.rootdir=true; see sbt/sbt#1458
 WORKDIR /app
